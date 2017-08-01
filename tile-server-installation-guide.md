@@ -175,9 +175,13 @@ In the `[default]` section change the value of XML and HOST:
     XML=/home/osm/openstreetmap-carto-2.41.0/style.xml
     HOST=localhost
 
-In the `[mapnik]` section, change the value of plugins_dir:
+In the `[mapnik]` section, change the value of plugins_dir to the output of:
 
-    plugins_dir=/usr/lib/mapnik/3.0/input/
+    mapnik-config --input-plugins
+
+Which results in our case in: 
+
+    plugins_dir=/usr/local/lib/mapnik/input
 
 Save and close the file.
 
